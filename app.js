@@ -575,3 +575,26 @@
 // }
 
 // rafOlustur()
+
+//?----------------------------------------------------------sayi-tahmin-etme
+let mSayi = parseInt(Math.random()*100)
+let hak = 1
+function tahminEt () {
+    let oSayi = Number(prompt("Tahmini Sayiyi Gir"))
+
+if (mSayi == oSayi) {
+    console.log ("kazandınız")
+}else {
+    if (hak ==3) {
+        console.log("kaybettiniz")
+    } else {
+        if (oSayi >  mSayi) {
+            console.log("kucuk gir")
+        } else {
+            console.log("buyuk gir");
+        }
+        hak = hak + 1
+        tahminEt()
+    }
+}
+}
